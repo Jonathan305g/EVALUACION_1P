@@ -54,10 +54,13 @@
 
   cd EVALUACION_1P
 
+  ![Clonación del repositorio](images/git_clone.png)
+
   - ¿Cómo se verificó que se estaba trabajando sobre el fork y no sobre el repositorio original?
 
   Se verifico mediante el comando git remote -v
 
+![Verificación de remoto](images/git_remote.png)
 ---
 
 ## Pregunta 2 (1 punto)
