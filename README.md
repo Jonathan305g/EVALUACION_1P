@@ -3,8 +3,8 @@
 ### Carrera de [Nombre de la Carrera]  
 
 **Asignatura:** Manejo y Configuración de Software  
-**Nombre del Estudiante:** ___________________________  
-**Fecha:** ___________________  
+**Nombre del Estudiante:** Jonathan Gamboa  
+**Fecha:** 08/04/2026 
 
 ---
 
@@ -40,7 +40,23 @@
 
 **📝 Respuesta:**
 
-<!-- Escribe aquí tu respuesta a la Pregunta 1 -->
+-¿Cómo se realizó el fork?
+  -Entré al repositorio original en GitHub
+   - Hice clic en el botón "Fork" en la esquina superior derecha
+   - Seleccioné mi cuenta personal como destino del fork
+   - GitHub creó una copia del repositorio en mi cuenta
+
+  - ¿Cómo se realizó el clone del fork?
+  Primero: 
+  git clone https://github.com/santiagojara/EVALUACION_1P.git
+
+  Luego ingreso al repomediante: 
+
+  cd EVALUACION_1P
+
+  - ¿Cómo se verificó que se estaba trabajando sobre el fork y no sobre el repositorio original?
+
+  Se verifico mediante el comando git remote -v
 
 ---
 
