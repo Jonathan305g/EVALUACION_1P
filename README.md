@@ -186,9 +186,35 @@ git merge develop
 
 **📝 Respuesta:**
 
-<!-- Escribe aquí tu respuesta completa a la Pregunta 4 -->
+📝 Respuesta:
 
----
+**¿Qué es un Pull Request?**
+Un Pull Request (PR) es una solicitud para fusionar cambios de una rama a otra. Permite revisar el código antes de integrarlo, facilitando la colaboración y el control de calidad.
+
+![Pregunta 3](images/develop.png)
+
+**¿Por qué es importante revisar un PR?**
+- Detectar errores antes de que lleguen a producción
+- Mantener calidad y consistencia del código
+- Compartir conocimiento entre el equipo
+- Verificar que cumple con los estándares del proyecto
+
+**Validaciones durante la revisión:**
+- Funcionalidad correcta del código
+- Cumplimiento de estándares de codificación
+- Cobertura de tests
+- Documentación adecuada
+- Sin conflictos con la rama base
+- Rendimiento y seguridad
+
+**Resumen del procedimiento:**
+1. Se trabajó en rama develop
+2. Se realizaron 3 commits, cada uno respondiendo una pregunta
+3. Se creó PR desde develop hacia main
+4. Se agregaron comentarios solicitando completar respuestas
+5. Se aprobó el PR y se hizo merge
+
+
 
 ## Pregunta 5 (2 puntos)
 
@@ -219,9 +245,53 @@ git merge develop
 
 **📝 Respuesta:**
 
-<!-- Escribe aquí tu respuesta completa a la Pregunta 5 -->
+📝 Respuesta:
 
----
+**Procedimiento completo:**
+
+1. **Creación de ramas:**
+```bash
+   git checkout develop
+   git checkout -b ramaA
+   echo "Contenido A" > archivoA.txt
+   git add archivoA.txt
+   git commit -m "RamaA: Crear archivoA"
+   
+   git checkout develop
+   git checkout -b ramaB
+   echo "Contenido B" > archivoA.txt
+   git add archivoA.txt
+   git commit -m "RamaB: Crear archivoA"
+```
+![Pregunta 5](images/crear_ramas.png)
+2. **Generación del conflicto:**
+```bash
+   git checkout ramaA
+   git merge ramaB
+```
+   Git detectó que el mismo archivo fue modificado de formas diferentes.
+
+3. **Resolución del conflicto:**
+   - Edité archivoA.txt manualmente combinando ambos contenidos
+   - `git add archivoA.txt`
+   - `git commit -m "Resolver conflicto"`
+
+4. **Merge a develop:**
+```bash
+   git checkout develop
+   git merge ramaA
+```
+![Pregunta 5](images/conflictos.png)
+5. **Eliminación de ramas:**
+```bash
+   git branch -d ramaA
+   git branch -d ramaB
+```
+![Pregunta 5](images/delete.png)
+
+**¿Qué es un conflicto en Git?**
+Un conflicto ocurre cuando Git no puede fusionar automáticamente cambios porque dos ramas modificaron las mismas líneas de un archivo de formas diferentes. En este caso, ambas ramas crearon archivoA.txt con contenido distinto, por lo que Git requirió intervención manual para decidir qué contenido mantener.
+
 
 ## Pregunta 6 (2 puntos)
 
