@@ -82,9 +82,29 @@
 
 **📝 Respuesta:**
 
-<!-- Escribe aquí tu explicación y evidencia para la Pregunta 2 -->
+1. Realizar un **primer commit** que incluya únicamente el archivo `.gitignore` con las reglas de exclusión definidas.
 
----
+![Crear .gitignore](images/gitignore.png)
+
+![Crear commit 1 pregunta 2](commit1_pregunta2.png)
+2. Realizar un **segundo commit** que incluya las creación de los archivos de prueba.
+Archivos de prueba:
+![Crear .gitignore](images/archivos_de_prueba.png)
+
+![Crear commit 2 pregunta 2](commit2_pregunta2.png)
+
+2. Realizar un **tercer commit** donde se explique en este README la función del archivo `.gitignore` y se muestre evidencia de que los archivos y carpetas indicadas no están siendo rastreadas por Git.
+
+Al ejecutar `git status`, se observa que:
+- Los archivos .log no aparecen como pendientes
+- La carpeta temp/ no es rastreada
+- Los archivos prueba.md y prueba.txt dentro de doc/ son ignorados
+- Los archivos prueba.md y prueba.txt en la raíz SÍ son rastreados (no están en doc/)
+
+![Cromprobar ignore](comprobar_ignore.png)
+
+![Cromprobar ignore](--ignored.png)
+
 
 ## Pregunta 3 (2 puntos)
 
