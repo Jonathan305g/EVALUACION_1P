@@ -86,12 +86,12 @@
 
 ![Crear .gitignore](images/gitignore.png)
 
-![Crear commit 1 pregunta 2](commit1_pregunta2.png)
+![Crear commit 1 pregunta 2](images/commit1_pregunta2.png)
 2. Realizar un **segundo commit** que incluya las creación de los archivos de prueba.
 Archivos de prueba:
 ![Crear .gitignore](images/archivos_de_prueba.png)
 
-![Crear commit 2 pregunta 2](commit2_pregunta2.png)
+![Crear commit 2 pregunta 2](images/commit2_pregunta2.png)
 
 2. Realizar un **tercer commit** donde se explique en este README la función del archivo `.gitignore` y se muestre evidencia de que los archivos y carpetas indicadas no están siendo rastreadas por Git.
 
@@ -101,9 +101,9 @@ Al ejecutar `git status`, se observa que:
 - Los archivos prueba.md y prueba.txt dentro de doc/ son ignorados
 - Los archivos prueba.md y prueba.txt en la raíz SÍ son rastreados (no están en doc/)
 
-![Cromprobar ignore](comprobar_ignore.png)
+![Cromprobar ignore](images/comprobar_ignore.png)
 
-![Cromprobar --ignore](--ignored.png)
+![Cromprobar --ignore](images/--ignored.png)
 
 
 ## Pregunta 3 (2 puntos)
@@ -158,7 +158,7 @@ git merge develop
 - **Hotfixes rápidos**: Permite correcciones urgentes sin interrumpir el desarrollo
 - **Historial limpio**: Mantiene un historial de commits organizado y comprensible
 
-![Pregunta 3](pregunta3.png)
+![Pregunta 3](images/pregunta3.png)
 
 ## Pregunta 4 (2 puntos)
 
