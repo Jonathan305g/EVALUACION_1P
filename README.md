@@ -86,12 +86,12 @@
 
 ![Crear .gitignore](images/gitignore.png)
 
-![Crear commit 1 pregunta 2](commit1_pregunta2.png)
+![Crear commit 1 pregunta 2](images/commit1_pregunta2.png)
 2. Realizar un **segundo commit** que incluya las creación de los archivos de prueba.
 Archivos de prueba:
 ![Crear .gitignore](images/archivos_de_prueba.png)
 
-![Crear commit 2 pregunta 2](commit2_pregunta2.png)
+![Crear commit 2 pregunta 2](images/commit2_pregunta2.png)
 
 2. Realizar un **tercer commit** donde se explique en este README la función del archivo `.gitignore` y se muestre evidencia de que los archivos y carpetas indicadas no están siendo rastreadas por Git.
 
@@ -101,9 +101,9 @@ Al ejecutar `git status`, se observa que:
 - Los archivos prueba.md y prueba.txt dentro de doc/ son ignorados
 - Los archivos prueba.md y prueba.txt en la raíz SÍ son rastreados (no están en doc/)
 
-![Cromprobar ignore](comprobar_ignore.png)
+![Cromprobar ignore](images/comprobar_ignore.png)
 
-![Cromprobar --ignore](--ignored.png)
+![Cromprobar --ignore](images/--ignored.png)
 
 
 ## Pregunta 3 (2 puntos)
@@ -132,9 +132,33 @@ Al ejecutar `git status`, se observa que:
 
 **📝 Respuesta:**
 
-<!-- Escribe aquí tu respuesta completa a la Pregunta 3 -->
+**Comandos utilizados:**
+```bash
+git flow init
+git flow feature start ingresar-encabezado
+# [editar README.md]
+git add README.md
+git commit -m "Feature: Completar encabezado con datos personales"
+git flow feature finish ingresar-encabezado
+git checkout main
+git merge develop
+```
 
----
+**Descripción del proceso:**
+1. `git flow init`: Inicializa Git Flow creando las ramas main y develop
+2. `git flow feature start ingresar-encabezado`: Crea rama feature/ingresar-encabezado desde develop
+3. Se realizan los cambios y commits en la feature
+4. `git flow feature finish ingresar-encabezado`: Fusiona la feature en develop y elimina la rama feature
+5. Se fusiona develop en main para tener la versión final
+
+**Ventajas de Git Flow:**
+- **Organización clara**: Separa desarrollo (develop), producción (main) y features
+- **Trabajo colaborativo**: Múltiples desarrolladores pueden trabajar en features paralelas sin conflictos
+- **Releases controladas**: Facilita el versionamiento y despliegue de releases estables
+- **Hotfixes rápidos**: Permite correcciones urgentes sin interrumpir el desarrollo
+- **Historial limpio**: Mantiene un historial de commits organizado y comprensible
+
+![Pregunta 3](images/pregunta3.png)
 
 ## Pregunta 4 (2 puntos)
 
@@ -162,9 +186,35 @@ Al ejecutar `git status`, se observa que:
 
 **📝 Respuesta:**
 
-<!-- Escribe aquí tu respuesta completa a la Pregunta 4 -->
+📝 Respuesta:
 
----
+**¿Qué es un Pull Request?**
+Un Pull Request (PR) es una solicitud para fusionar cambios de una rama a otra. Permite revisar el código antes de integrarlo, facilitando la colaboración y el control de calidad.
+
+![Pregunta 3](images/develop.png)
+
+**¿Por qué es importante revisar un PR?**
+- Detectar errores antes de que lleguen a producción
+- Mantener calidad y consistencia del código
+- Compartir conocimiento entre el equipo
+- Verificar que cumple con los estándares del proyecto
+
+**Validaciones durante la revisión:**
+- Funcionalidad correcta del código
+- Cumplimiento de estándares de codificación
+- Cobertura de tests
+- Documentación adecuada
+- Sin conflictos con la rama base
+- Rendimiento y seguridad
+
+**Resumen del procedimiento:**
+1. Se trabajó en rama develop
+2. Se realizaron 3 commits, cada uno respondiendo una pregunta
+3. Se creó PR desde develop hacia main
+4. Se agregaron comentarios solicitando completar respuestas
+5. Se aprobó el PR y se hizo merge
+
+
 
 ## Pregunta 5 (2 puntos)
 
