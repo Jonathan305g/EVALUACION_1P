@@ -245,9 +245,53 @@ Un Pull Request (PR) es una solicitud para fusionar cambios de una rama a otra. 
 
 **📝 Respuesta:**
 
-<!-- Escribe aquí tu respuesta completa a la Pregunta 5 -->
+📝 Respuesta:
 
----
+**Procedimiento completo:**
+
+1. **Creación de ramas:**
+```bash
+   git checkout develop
+   git checkout -b ramaA
+   echo "Contenido A" > archivoA.txt
+   git add archivoA.txt
+   git commit -m "RamaA: Crear archivoA"
+   
+   git checkout develop
+   git checkout -b ramaB
+   echo "Contenido B" > archivoA.txt
+   git add archivoA.txt
+   git commit -m "RamaB: Crear archivoA"
+```
+![Pregunta 5](images/crear_ramas.png)
+2. **Generación del conflicto:**
+```bash
+   git checkout ramaA
+   git merge ramaB
+```
+   Git detectó que el mismo archivo fue modificado de formas diferentes.
+
+3. **Resolución del conflicto:**
+   - Edité archivoA.txt manualmente combinando ambos contenidos
+   - `git add archivoA.txt`
+   - `git commit -m "Resolver conflicto"`
+
+4. **Merge a develop:**
+```bash
+   git checkout develop
+   git merge ramaA
+```
+![Pregunta 5](images/conflictos.png)
+5. **Eliminación de ramas:**
+```bash
+   git branch -d ramaA
+   git branch -d ramaB
+```
+![Pregunta 5](images/delete.png)
+
+**¿Qué es un conflicto en Git?**
+Un conflicto ocurre cuando Git no puede fusionar automáticamente cambios porque dos ramas modificaron las mismas líneas de un archivo de formas diferentes. En este caso, ambas ramas crearon archivoA.txt con contenido distinto, por lo que Git requirió intervención manual para decidir qué contenido mantener.
+
 
 ## Pregunta 6 (2 puntos)
 
