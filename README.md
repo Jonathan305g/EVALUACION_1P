@@ -132,9 +132,33 @@ Al ejecutar `git status`, se observa que:
 
 **📝 Respuesta:**
 
-<!-- Escribe aquí tu respuesta completa a la Pregunta 3 -->
+**Comandos utilizados:**
+```bash
+git flow init
+git flow feature start ingresar-encabezado
+# [editar README.md]
+git add README.md
+git commit -m "Feature: Completar encabezado con datos personales"
+git flow feature finish ingresar-encabezado
+git checkout main
+git merge develop
+```
 
----
+**Descripción del proceso:**
+1. `git flow init`: Inicializa Git Flow creando las ramas main y develop
+2. `git flow feature start ingresar-encabezado`: Crea rama feature/ingresar-encabezado desde develop
+3. Se realizan los cambios y commits en la feature
+4. `git flow feature finish ingresar-encabezado`: Fusiona la feature en develop y elimina la rama feature
+5. Se fusiona develop en main para tener la versión final
+
+**Ventajas de Git Flow:**
+- **Organización clara**: Separa desarrollo (develop), producción (main) y features
+- **Trabajo colaborativo**: Múltiples desarrolladores pueden trabajar en features paralelas sin conflictos
+- **Releases controladas**: Facilita el versionamiento y despliegue de releases estables
+- **Hotfixes rápidos**: Permite correcciones urgentes sin interrumpir el desarrollo
+- **Historial limpio**: Mantiene un historial de commits organizado y comprensible
+
+![Pregunta 3](pregunta3.png)
 
 ## Pregunta 4 (2 puntos)
 
