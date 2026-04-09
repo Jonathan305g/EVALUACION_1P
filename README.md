@@ -1,10 +1,10 @@
-# Universidad [Nombre de la Universidad]  
-## Facultad de [Nombre de la Facultad]  
-### Carrera de [Nombre de la Carrera]  
+# Universidad TECNICA DE AMBATO  
+## Facultad de INGENIERIA EN SISTEMAS ELECTRONICA E INDUSTRIAL
+### Carrera de SOFTWARE
 
 **Asignatura:** Manejo y Configuración de Software  
-**Nombre del Estudiante:** Jonathan Gamboa  
-**Fecha:** 08/04/2026 
+**Nombre del Estudiante:** Jonathan Alexis Gamboa Guaman
+**Fecha:** 08-04-2026 
 
 ---
 
@@ -103,7 +103,7 @@ Al ejecutar `git status`, se observa que:
 
 ![Cromprobar ignore](comprobar_ignore.png)
 
-![Cromprobar ignore](--ignored.png)
+![Cromprobar --ignore](--ignored.png)
 
 
 ## Pregunta 3 (2 puntos)
